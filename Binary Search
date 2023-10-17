@@ -1,0 +1,17 @@
+def Binary_Search(list, target):
+  lower = 0
+  upper = len(list)-1
+  
+  while lower <= upper:
+    mid = (lower + upper) // 2
+    if list[mid] == target:
+      return mid
+    elif list[mid] < target:
+      lower = mid + 1
+    else:
+      upper = mid - 1
+  return None
+
+list = [1,5,9,10,78,89,202,7852,4789314]
+target = 89
+print(Binary_Search(list, target))
